@@ -41,9 +41,9 @@ export const education = [
 ];
 
 export const projects = [
-  { image: "/project1.jpg", text: "Write about project 1 here." },
-  { image: "/project2.jpg", text: "Write about project 2 here." },
-  { image: "/project3.jpg", text: "Write about project 3 here." },
-  { image: "/project4.jpg", text: "Write about project 4 here." },
-  { image: "/project5.jpg", text: "Write about project 5 here." },
+  { image: "/project1.jpg", text: "The Lamp & Light cafe website: a warm, cozy design with a clear menu and easy table booking." },
+  { image: "/project2.jpg", text: "Flower shop home page: soft pink colors and a clean layout that makes every bouquet stand out." },
+  { image: "/project3.jpg", text: "The same flower shop, further down the page: a \"Why Choose Us\" section and key store highlights." },
+  { image: "/project4.jpg", text: "Bus travel website for the Butwal to Delhi route: simple booking, clear trip details, and a friendly look." },
+  { image: "/project5.jpg", text: "WildRoots Eco-Hike Hub: a trekking and hiking organization website, built for my 2nd semester college assignment." },
 ];

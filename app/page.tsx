@@ -27,10 +27,33 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 }
 
 function Pic({ src, alt, label }: { src: string; alt: string; label: string }) {
+  const [tries, setTries] = useState(0);
   const [missing, setMissing] = useState(false);
+  const ref = useRef<HTMLImageElement>(null);
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+  const retry = () => {
+    if (tries < 3) setTimeout(() => setTries((t) => t + 1), 400);
+    else setMissing(true);
+  };
+
+  useEffect(() => {
+    const el = ref.current;
+    if (el && el.complete && el.naturalWidth === 0) retry();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   if (missing || !src) return <span>{label}</span>;
-  // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt={alt} onError={() => setMissing(true)} />;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      ref={ref}
+      key={tries}
+      src={`${base}${src}${tries ? `?r=${tries}` : ""}`}
+      alt={alt}
+      onError={retry}
+    />
+  );
 }
 
 /* Card with a spotlight that follows the mouse */

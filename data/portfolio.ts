@@ -1,7 +1,7 @@
 export const profile = {
   name: "Aarushi KC",
   intro:
-    "Front-end developer from Butwal, Nepal. I build fast, responsive websites with HTML, CSS, JavaScript, TypeScript, React and Next.js.",
+    "Front-end developer from Pokhara, Nepal. I build fast, responsive websites with HTML, CSS, JavaScript, TypeScript, React and Next.js.",
   roles: ["Front-end Developer", "React & Next.js Builder", "Freelancer", "BSc.IT Student"],
   photo: "/me.jpg",
   email: "kcaarushi6@gmail.com",

@@ -197,7 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-     {/* About */}
+        {/* About */}
         <section id="about">
           <div className="wrap about">
             <Reveal>
